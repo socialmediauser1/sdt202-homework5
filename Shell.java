@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Shell
 {
     private static final int[] increments = { 1093, 364, 121, 40, 13, 4, 1 };
@@ -29,8 +32,8 @@ public class Shell
     private static void show(Comparable[] a)
     {
         for (int i = 0; i < a.length; i++)
-            StdOut.print(a[i] + " ");
-        StdOut.println();
+            System.out.print(a[i] + " ");
+        System.out.println();
     }
 
     public static boolean isSorted(Comparable[] a)
@@ -42,7 +45,11 @@ public class Shell
 
     public static void main(String[] args)
     {
-        String[] a = In.readStrings();
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> values = new ArrayList<>();
+        while (scanner.hasNext())
+            values.add(scanner.next());
+        String[] a = values.toArray(new String[0]);
         sort(a);
         assert isSorted(a);
         show(a);

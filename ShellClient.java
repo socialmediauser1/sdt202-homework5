@@ -6,18 +6,18 @@ public class ShellClient
             "S", "H", "E", "L", "L", "S", "O", "R", "T", "R", "O", "C", "K", "S"
         };
 
-        StdOut.println("Before sorting:");
+        System.out.println("Before sorting:");
         for (int i = 0; i < a.length; i++)
-            StdOut.print(a[i] + " ");
-        StdOut.println();
+            System.out.print(a[i] + " ");
+        System.out.println();
 
         Shell.sort(a);
 
-        StdOut.println("After sorting:");
+        System.out.println("After sorting:");
         for (int i = 0; i < a.length; i++)
-            StdOut.print(a[i] + " ");
-        StdOut.println();
+            System.out.print(a[i] + " ");
+        System.out.println();
 
-        StdOut.println("isSorted = " + Shell.isSorted(a));
+        System.out.println("isSorted = " + Shell.isSorted(a));
     }
 }
